@@ -13,8 +13,8 @@ const Dashboard: React.FC = () => {
     useEffect(() => {
         // Placeholder NFT data
         const MockNFTs = [
-            { id: "1", name: "Cool dude", image: "./images/nfts.jpg"},
-        ];
+            { id: "1", name: "Studio mirai", image: "./images/Sui-image.jpg"},
+          ];
         setNFTs(MockNFTs)
     }, []);
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { walletAdapter } from '@mysten/sui';
+
 
 const Onboarding: React.FC = () => {
     const navigate = useNavigate();
@@ -12,10 +12,18 @@ const Onboarding: React.FC = () => {
 };
 
  return (
-    <div className='h-screen flex items-center justify-center bg-gradient-to-r from-purple-500 to-indigo-500'>
-        <div className='text-center'>
-            <h1 className='text-white text-4xl font-bold mb-4'>Welcome to Sui Market</h1>
-            <p className='text-gray-300 mb-8'>Connect your wallet to get started.</p>
+    <div className='h-screen flex items-center justify-center bg-gradient-to-r from-purple-500 to-indigo-500'
+    style={{ backgroundImage: `url("./images/sui wallpaper.jpeg")`,
+        backgroundSize: "cover", // Ensure the image covers the screen
+        backgroundPosition: "center", // Centre the image 
+        backgroundAttachment: "fixed", // Keep the background fixed on scroll
+    }}
+    role='main'
+    aria-label='Sui Wallpaper'
+    >
+        <div className='text-center bg-white bg-opacity-20 p-10 rounded-xl shadow-2xl max-w-md'>
+            <h1 className='text-5xl font-extrabold text-white mb-6 leading-tight drop-shadow-lg'>Welcome to Sui Market</h1>
+            <p className='text-lg text-gray-400 mb-10 leading-relaxed'>Connect your wallet to get started.</p>
             <button
             className='bg-white text-indigo-600 px-6 py-3 rounded-lg shadow-md hover:bg-indigo-100'
             onClick={handleConnectWallet}
