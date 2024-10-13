@@ -30,18 +30,26 @@ const Dashboard: React.FC = () => {
       // logic for editing the profile here
     }
 
+    
+
     return (
         <div className='min-h-screen bg-black p-8'>
           {/* Header section */}
            <div className='flex justiy-between items-center mb-8'>
             <div className='flex items-center space-x-4'>
+             <img src="./images/Sui-image.jpg" alt="bg-image" 
+             className='w-280 h-40'
+             />
+            </div>
+
+            <div className='relative left-10'>
               <img
-               src = {profileImage}
+               src = './images/sui play.jpg'
                alt = "Profile"
                className='w-16 h-16 rounded-full object-cover cursor-pointer'
                onClick={handleEditProfile}
                 />
-            <div>
+            
               <h1 className='text-2xl font-bold text-gray-800'>{userName}</h1>
               <button
               onClick={handleEditProfile}
@@ -49,16 +57,15 @@ const Dashboard: React.FC = () => {
               >
                 Edit Profile 
               </button>
-            </div>
-            </div>
+        
           <button 
           onClick={handleSignOut}
           className='bg-red-500 text-white px-2 py-2 rounded-lg shadow-md hover:bg-red-600'>
             Sign out 
           </button>
            </div>
-          
-          <Link to='/collection' className='mt-8 inline-block text-indigo-600'>
+          </div>  
+          <Link to='/collection' className='mb-2 inline-block text-indigo-600'>
             View Collections 
           </Link>
 

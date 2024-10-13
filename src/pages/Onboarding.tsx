@@ -17,7 +17,7 @@ const Onboarding: React.FC = () => {
         backgroundSize: "cover", // Ensure the image covers the screen
         backgroundPosition: "center", // Centre the image 
         backgroundRepeat: 'no-repeat', // prevents image repetition
-       // Keep the background fixed on scroll
+        backgroundAttachment: "fixed", // Keep the background fixed on scroll
     }}
     role='main'
     aria-label='Sui Wallpaper'
