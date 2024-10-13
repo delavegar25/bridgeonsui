@@ -15,12 +15,13 @@ const Collection: React.FC = () => {
             { id: "1", name: "Art block", image: "./images/nfts1.jpg"},
             { id: "2", name: "Bond bears", image: "./images/Bond bears.png"},
             { id: "3", name: "Abstract art", image: "./images/abstract art.jpg"},
-        ];
+            { id: "4", name: "Studio mirai", image: "./images/Sui-image.jpg"}  
+          ];
         setCollection(mockCollection);
     }, []);
 
     return (
-        <div className='min-h-screen bg-gray-600 p-8'>
+        <div className='min-h-screen bg-black p-8'>
           <h1 className='text-3xl font-bold mb-8'> NFT Collection</h1>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {collection.map((nft) => 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 interface NFT  { // structure the object of the NFT name, image, and ID
     id: string;
@@ -9,6 +9,9 @@ interface NFT  { // structure the object of the NFT name, image, and ID
 
 const Dashboard: React.FC = () => {
     const [nfts, setNFTs] = useState<NFT[]>([]);
+    const [userName, setUserName] = useState("John doe");
+    const [profileImage, setProfileImage] = useState("./images/default-image.jpg");
+    const navigate = useNavigate();
 
     useEffect(() => {
         // Placeholder NFT data
@@ -18,17 +21,43 @@ const Dashboard: React.FC = () => {
         setNFTs(MockNFTs)
     }, []);
 
+    const handleSignOut = () => {
+      console.log("Signing out....");
+      navigate('/'); // redirect to home page
+    }
+
+    const handleEditProfile = () => {
+      // logic for editing the profile here
+    }
+
     return (
-        <div className='min-h-screen bg-gray-500 p-8'>
-          <h1 className='text-3xl font-bold mb-8'>My Dashboard</h1>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {nfts.map((nft: { id: React.Key | null | undefined; image: string | undefined; name: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined; }) => (
-                <div key={nft.id} className='bg-white p-4 shadow-lg rounded-lg'>
-                   <img src={nft.image} className='w-full h-64 object-cover mb-4 rounded cursor-pointer' />
-                   <h2 className='text-xl font-semibold'>{nft.name}</h2>
-                    </div>
-            ))}
-          </div>
+        <div className='min-h-screen bg-black p-8'>
+          {/* Header section */}
+           <div className='flex justiy-between items-center mb-8'>
+            <div className='flex items-center space-x-4'>
+              <img
+               src = {profileImage}
+               alt = "Profile"
+               className='w-16 h-16 rounded-full object-cover cursor-pointer'
+               onClick={handleEditProfile}
+                />
+            <div>
+              <h1 className='text-2xl font-bold text-gray-800'>{userName}</h1>
+              <button
+              onClick={handleEditProfile}
+              className='text-indigo-600 underline text-sm' 
+              >
+                Edit Profile 
+              </button>
+            </div>
+            </div>
+          <button 
+          onClick={handleSignOut}
+          className='bg-red-500 text-white px-2 py-2 rounded-lg shadow-md hover:bg-red-600'>
+            Sign out 
+          </button>
+           </div>
+          
           <Link to='/collection' className='mt-8 inline-block text-indigo-600'>
             View Collections 
           </Link>
