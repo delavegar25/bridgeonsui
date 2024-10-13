@@ -25,7 +25,7 @@ const Onboarding: React.FC = () => {
             <h1 className='text-5xl font-extrabold text-white mb-6 leading-tight drop-shadow-lg'>Welcome to Sui Market</h1>
             <p className='text-lg text-gray-400 mb-10 leading-relaxed'>Connect your wallet to get started.</p>
             <button
-            className='bg-white text-indigo-600 px-6 py-3 rounded-lg shadow-md hover:bg-indigo-100'
+            className='bg-gray-500 text-indigo-600 hover:bg-indigo-700 text-white py-4 px-6 rounded-lg font-semibold shadow-md transition-transform transform hover:scale-105'
             onClick={handleConnectWallet}
             >
                Connect Wallet 
