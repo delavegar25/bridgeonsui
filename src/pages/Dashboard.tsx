@@ -42,7 +42,7 @@ const Dashboard: React.FC = () => {
              />
             </div>
 
-            <div className='relative left-10'>
+            <div className='absolute right-80'>
               <img
                src = './images/sui play.jpg'
                alt = "Profile"
