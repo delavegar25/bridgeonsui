@@ -35,14 +35,14 @@ const Dashboard: React.FC = () => {
     return (
         <div className='min-h-screen bg-black p-8'>
           {/* Header section */}
-           <div className='flex justiy-between items-center mb-8'>
+           <div className='flex justify-between items-center mb-8'>
             <div className='flex items-center space-x-4'>
              <img src="./images/Sui-image.jpg" alt="bg-image" 
              className='w-280 h-40'
              />
             </div>
 
-            <div className='relative left-90 m-10'>
+            <div className='relative top-40'>
               <img
                src = './images/sui play.jpg'
                alt = "Profile"
@@ -53,7 +53,7 @@ const Dashboard: React.FC = () => {
               <h1 className='text-2xl font-bold text-gray-800'>{userName}</h1>
               <button
               onClick={handleEditProfile}
-              className='text-indigo-600 underline text-sm' 
+              className='text-indigo-600 underline text-sm p-2' 
               >
                 Edit Profile 
               </button>
@@ -65,7 +65,7 @@ const Dashboard: React.FC = () => {
           </button>
            </div>
           </div>  
-          <Link to='/collection' className='mb-2 inline-block text-indigo-600'>
+          <Link to='/collection' className='mb-2 inline-block text-indigo-600 relative top-72'>
             View Collections 
           </Link>
 
