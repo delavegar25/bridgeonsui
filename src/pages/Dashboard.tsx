@@ -38,19 +38,20 @@ const Dashboard: React.FC = () => {
            <div className='flex justify-between items-center mb-8'>
             <div className='flex items-center space-x-4'>
              <img src="./images/Sui-image.jpg" alt="bg-image" 
-             className='w-280 h-40'
+             className='w-77 h-36'
              />
             </div>
 
-            <div className='relative top-40'>
+            <div style={{ fontFamily: 'Roboto Flex sans-serif' }}
+            className='relative top-60'>
               <img
                src = './images/sui play.jpg'
                alt = "Profile"
-               className='w-16 h-16 rounded-full object-cover cursor-pointer'
+               className='w-16 h-16 rounded-full object-cover cursor-pointer relative left-2'
                onClick={handleEditProfile}
                 />
             
-              <h1 className='text-2xl font-bold text-gray-800'>{userName}</h1>
+              <h1 className='text-2xl font-bold text-gray-800 relative left-2'>{userName}</h1>
               <button
               onClick={handleEditProfile}
               className='text-indigo-600 underline text-sm p-2' 
@@ -65,7 +66,8 @@ const Dashboard: React.FC = () => {
           </button>
            </div>
           </div>  
-          <Link to='/collection' className='mb-2 inline-block text-indigo-600 relative top-72'>
+          <Link style={{ fontFamily: 'Roboto Flex sans-serif' }} 
+          to='/collection' className='mb-2 inline-block text-indigo-600 relative top-72'>
             View Collections 
           </Link>
 
