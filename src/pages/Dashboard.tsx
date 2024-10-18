@@ -38,7 +38,7 @@ const Dashboard: React.FC = () => {
            <div className='flex justify-between items-center mb-8'>
             <div className='flex items-center space-x-4'>
              <img src="./images/Sui-image.jpg" alt="bg-image" 
-             className='w-77 h-36'
+             className='w-full h-60 object-cover rounded-lg'
              />
             </div>
 
@@ -47,7 +47,7 @@ const Dashboard: React.FC = () => {
               <img
                src = './images/sui play.jpg'
                alt = "Profile"
-               className='w-16 h-16 rounded-full object-cover cursor-pointer relative left-2'
+               className='w-24 h-24 rounded-full object-cover cursor-pointer relative left-2'
                onClick={handleEditProfile}
                 />
             
